@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'g++ -o output hello.cpp' // Compiling C++ file
+                sh 'g++ -o output hello.cpp' 
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh './output'  // Running the compiled program
+                sh './output'  
             }
         }
         stage('Deploy') {
